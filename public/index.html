@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интеллектуальный чат-бот по дисциплине "Интеллектуальные системы и технологии"</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Заголовок -->
+        <header class="header">
+            <div class="header-content">
+                <h1><i class="fas fa-robot"></i> Интеллектуальный чат-бот</h1>
+                <p>Дисциплина: "Интеллектуальные системы и технологии"</p>
+                <div class="theme-toggle">
+                    <button id="themeToggle" class="theme-btn">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Главная страница -->
+        <div id="mainPage" class="main-page">
+            <div class="container">
+                <div class="welcome-section">
+                    <h2>Добро пожаловать в интеллектуальную систему обучения!</h2>
+                    <p>Этот чат-бот поможет вам изучить 23 темы дисциплины "Интеллектуальные системы и технологии".</p>
+                    <p>Вы можете задать вопрос в свободной форме или выбрать конкретную тему для изучения.</p>
+                </div>
+
+                <div class="search-section">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Задайте вопрос или введите ключевые слова...">
+                        <button id="searchBtn" class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="topics-section">
+                    <h3>Темы дисциплины</h3>
+                    <div id="topicsGrid" class="topics-grid">
+                        <!-- Темы будут загружены динамически -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Страница чата -->
+        <div id="chatPage" class="chat-page hidden">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <button id="backBtn" class="back-btn">
+                        <i class="fas fa-arrow-left"></i>
+                        Назад к темам
+                    </button>
+                    <h3 id="chatTitle">Чат с ботом</h3>
+                </div>
+
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message bot-message">
+                        <div class="message-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="message-content">
+                            <p>Привет! Я интеллектуальный чат-бот по дисциплине "Интеллектуальные системы и технологии".</p>
+                            <p>Задайте мне вопрос или выберите тему для изучения. Я помогу вам разобраться в сложных концепциях!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="typing-indicator hidden" id="typingIndicator">
+                    <div class="typing-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <span class="typing-text">Бот печатает...</span>
+                </div>
+
+                <div class="chat-input-container">
+                    <div class="chat-input">
+                        <input type="text" id="messageInput" placeholder="Введите ваш вопрос...">
+                        <button id="sendBtn" class="send-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
